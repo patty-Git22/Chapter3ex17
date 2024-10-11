@@ -26,13 +26,21 @@ int main()
 	int num1 = randomInt(MyEngine);
 	int num2 = randomInt(MyEngine);
 	int answer = num1 + num2;
+	int useranswer;
 
 	cout << "Press enter to begin using the Math Tutor program\n";
 	cin.get();
-	cout << "What is the answer to the following problem? Press enter when finished to see the answer.\n";
+	cout << "What is the answer to the following problem? \n";
 	cout << num1 << " + " << num2 << " = " << endl;
+	cout << "Type your answer here and press enter: ";
+	cin >> useranswer;
 	cin.get();
-	cout << "The correct answer is \n" << num1 << " + " << num2 << " = " << answer;
+	cout << "The correct answer is \n" << num1 << " + " << num2 << " = " << answer<<endl;
+
+	if (useranswer == answer)
+		cout << "You are correct!\n";
+	else
+		cout << "Your answer is not correct.\n";
 
 	return 0;
 }
